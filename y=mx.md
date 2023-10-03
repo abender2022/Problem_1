@@ -85,7 +85,8 @@ for i in range(100000):
 
         print(i,Score_Best)
 ```
-
+# Conclusion
+#### This approach to making predictions and optimizing the weight matrix is a form of random search, as new weight matrices are generated randomly.
 
 
 
