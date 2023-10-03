@@ -1,5 +1,5 @@
 # Data Preparation and Visualization
-##### Began by importing the necessary libraries and modules, including NumPy for numerical computations, Matplotlib for plotting, and Torch for deep learning. We also installed and imported the wandb library for experiment tracking.
+#### Began by importing the necessary libraries and modules, including NumPy for numerical computations, Matplotlib for plotting, and Torch for deep learning. We also installed and imported the wandb library for experiment tracking.
 
 ```
 %%capture
@@ -13,14 +13,14 @@ import wandb as wb
 from skimage.io import imread
 ```
 # Loading and Processing the Dataset
-##### Defined two functions, GPU and GPU_data, to convert the data into Torch tensors and transfer them to the GPU, with and without enabling gradient computation, respectively. 
+#### Defined two functions, GPU and GPU_data, to convert the data into Torch tensors and transfer them to the GPU, with and without enabling gradient computation, respectively. 
 ```
 def GPU(data):
     return torch.tensor(data, requires_grad=True, dtype=torch.float, device=torch.device('cuda'))
 def GPU_data(data):
     return torch.tensor(data, requires_grad=False, dtype=torch.float, device=torch.device('cuda'))
 ```
-##### Another function plot was created to plot data in grayscale, and if the data is a Torch tensor, it converts it to a numpy array first.
+#### Another function plot was created to plot data in grayscale, and if the data is a Torch tensor, it converts it to a numpy array first.
 ```
 def plot(x):
     if type(x) == torch.Tensor :
