@@ -1,4 +1,6 @@
-# Data Preparation and Visualization
+# MNIST
+
+## Data Preparation and Visualization
 #### Began by importing the necessary libraries and modules, including NumPy for numerical computations, Matplotlib for plotting, and Torch for deep learning. We also installed and imported the wandb library for experiment tracking.
 
 ```
@@ -12,7 +14,7 @@ from skimage.util import montage
 import wandb as wb
 from skimage.io import imread
 ```
-# Loading and Processing the Dataset
+## Loading and Processing the Dataset
 #### Defined two functions, GPU and GPU_data, to convert the data into Torch tensors and transfer them to the GPU, with and without enabling gradient computation, respectively. 
 ```
 def GPU(data):
@@ -63,7 +65,7 @@ Y_test = test_set.targets.numpy()
 X = X[:,None,:,:]/255    
 X_test = X_test[:,None,:,:]/255 
 ```
-# Visualizing the Data
+## Visualizing the Data
 ```
 x = X[5,0,:,:]
 ```
@@ -82,7 +84,7 @@ plot(X[31,0,:,:])
 ```
 montage_plot(X[127:176,0,:,:])
 ```
-# Conclusion
+## Conclusion
 #### This code is an example of how to load, process, and visualize the MNIST dataset using Python, Numpy, PyTorch, and Matplotlib.
 
 
