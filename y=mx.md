@@ -1,4 +1,6 @@
-# Reshaping and Transferring Data to GPU
+# y=mx Model on MNIST
+
+## Reshaping and Transferring Data to GPU
 #### The training and test data are reshaped to have each image's pixels in a flat array. This flattening is necessary to facilitate matrix multiplication when making predictions.
 ```
 X = X.reshape(X.shape[0],784)
@@ -14,7 +16,7 @@ Y_test = GPU_data(Y_test)
 ```
 X = X.T
 ```
-# Making Predictions
+## Making Predictions
 #### A batch of 64 examples is selected from the training data.
 ```
 x = X[:,0:64]
@@ -85,7 +87,7 @@ for i in range(100000):
 
         print(i,Score_Best)
 ```
-# Conclusion
+## Conclusion
 #### This approach to making predictions and optimizing the weight matrix is a form of random search, as new weight matrices are generated randomly.
 
 
