@@ -47,6 +47,7 @@ X_test = X_test[:,None,:,:]/255
 ```
 ## Generating Random Weights and Making Predictions
 #### A random matrix 'm' with a standard normal distribution is generated to act as the initial weights. A subset of data is selected, matrix multiplication is performed with 'm', and class labels are predicted. The accuracy on this subset is calculated.
+
 ```
 m = np.random.standard_normal((10,784))
 
