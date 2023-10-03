@@ -139,7 +139,7 @@ s = torch.argsort(score,descending=True)
 score[s]
 ```
 #### A second optimization loop is implemented, running for 1,000,000 iterations. A form of genetic algorithm is used to optimize a population of 'm' matrices. The best matrix and accuracy are updated, and the population evolves over time.
-##### Got up to 77%
+##### Got up to 76%
 ```
 N = 100  
 M = GPU_data(np.random.rand(N,10,784)) 
