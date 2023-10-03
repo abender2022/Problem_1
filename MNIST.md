@@ -37,7 +37,7 @@ def montage_plot(x):
     x = np.pad(x, pad_width=((0, 0), (1, 1), (1, 1)), mode='constant', constant_values=0)   # Pad the image
     plot(montage(x))   # calling plot function to display the montage
 ```
-##### The MNIST dataset is loaded into the train_set and test_set variables. The data is automatically downloaded if it’s not already present in the './data' directory.
+#### The MNIST dataset is loaded into the train_set and test_set variables. The data is automatically downloaded if it’s not already present in the './data' directory.
 ```
 #MNIST
 train_set = datasets.MNIST('./data', train=True, download=True)
@@ -51,14 +51,14 @@ test_set = datasets.MNIST('./data', train=False, download=True)
 # train_set = datasets.FashionMNIST('./data', train=True, download=True)
 # test_set = datasets.FashionMNIST('./data', train=False, download=True)
 ```
-##### The training and testing data and their corresponding labels are extracted and converted to numpy arrays.
+#### The training and testing data and their corresponding labels are extracted and converted to numpy arrays.
 ```
 X = train_set.data.numpy()
 X_test = test_set.data.numpy()
 Y = train_set.targets.numpy()
 Y_test = test_set.targets.numpy()
 ```
-##### The images are normalized to have pixel values between 0 and 1.
+#### The images are normalized to have pixel values between 0 and 1.
 ```
 X = X[:,None,:,:]/255    
 X_test = X_test[:,None,:,:]/255 
@@ -67,21 +67,23 @@ X_test = X_test[:,None,:,:]/255
 ```
 x = X[5,0,:,:]
 ```
-##### A sample image from the training set is visualized using matplotlib’s imshow function.
+#### A sample image from the training set is visualized using matplotlib’s imshow function.
 ```
 plt.imshow(x)
 ```
-##### The same image is also displayed using the custom plot function defined earlier.
+#### The same image is also displayed using the custom plot function defined earlier.
 ```
 plot(x)
 ```
 ```
 plot(X[31,0,:,:])
 ```
-##### A montage of images from the training set is displayed using the custom montage_plot function. This helps in visualizing multiple images at once to get a sense of the dataset's diversity.
+#### A montage of images from the training set is displayed using the custom montage_plot function. This helps in visualizing multiple images at once to get a sense of the dataset's diversity.
 ```
 montage_plot(X[127:176,0,:,:])
 ```
+# Conclusion
+#### This code is an example of how to load, process, and visualize the MNIST dataset using Python, Numpy, PyTorch, and Matplotlib.
 
 
 
