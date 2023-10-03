@@ -91,6 +91,7 @@ X_test = GPU_data(X_test)
 Y_test = GPU_data(Y_test)
 ```
 #### An optimization loop is executed 100,000 times to find the optimal 'm' matrix using random search. The best accuracy and corresponding matrix 'm' are updated whenever a better accuracy is found.
+##### Got up to 68%
 ```
 m_best = 0
 acc_best = 0
