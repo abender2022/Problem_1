@@ -45,14 +45,6 @@ def montage_plot(x):
 train_set = datasets.MNIST('./data', train=True, download=True)
 test_set = datasets.MNIST('./data', train=False, download=True)
 
-#KMNIST
-#train_set = datasets.KMNIST('./data', train=True, download=True)
-#test_set = datasets.KMNIST('./data', train=False, download=True)
-
-#Fashion MNIST
-# train_set = datasets.FashionMNIST('./data', train=True, download=True)
-# test_set = datasets.FashionMNIST('./data', train=False, download=True)
-```
 #### The training and testing data and their corresponding labels are extracted and converted to numpy arrays.
 ```
 X = train_set.data.numpy()
@@ -65,22 +57,6 @@ Y_test = test_set.targets.numpy()
 X = X[:,None,:,:]/255    
 X_test = X_test[:,None,:,:]/255 
 ```
-## Visualizing the Data
-```
-x = X[5,0,:,:]
-```
-#### A sample image from the training set is visualized using matplotlib’s imshow function.
-```
-plt.imshow(x)
-```
-#### The same image is also displayed using the custom plot function defined earlier.
-```
-plot(x)
-```
-```
-plot(X[31,0,:,:])
-```
-#### A montage of images from the training set is displayed using the custom montage_plot function. This helps in visualizing multiple images at once to get a sense of the dataset's diversity.
 ```
 montage_plot(X[127:176,0,:,:])
 ```
