@@ -86,5 +86,3 @@ A random walk approach is used to find better weights for the model. The code it
 - **Transfer to GPU**: Data is moved to the GPU for faster computations. Special functions are created to facilitate this transfer and set whether gradients should be computed.
 - **Random Weights**: Initially, random weights are assigned. A batch of images is then used to calculate the outputs and accuracy of the model with these weights.
 - **Random Walk**: This is a simplistic and non-optimal approach to optimize weights. It involves taking random steps and checking if the new weights improve accuracy. If so, they are kept; otherwise, the process continues.
-
-Note: The random walk is a naive approach, in real-world applications, gradient descent or other optimization algorithms are typically used to train machine learning models effectively. Also, the code lacks some essential parts like the loss function, backward propagation, and updates of the weights in a systematic manner.
